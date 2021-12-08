@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Search, Notifications, ArrowDropDown } from "@mui/icons-material";
 import "./navbar.scss";
 
-const Navbar = () => {
+export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   window.onscroll = () => {
@@ -42,6 +42,4 @@ const Navbar = () => {
       </div>
     </div>
   );
-};
-
-export default Navbar;
+}
