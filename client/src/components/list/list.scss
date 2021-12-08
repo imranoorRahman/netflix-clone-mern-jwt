@@ -35,6 +35,8 @@
             margin-left: 50px;
             display: flex;
             width: max-content;
+            transform: translatX(0px);
+            transition: all 1s ease;
         }
     }
 }

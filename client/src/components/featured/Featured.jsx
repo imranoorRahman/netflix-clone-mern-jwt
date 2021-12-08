@@ -1,5 +1,5 @@
 import "./featured.scss";
-import { PlayArrowOutlined, InfoOutlined } from "@mui/icons-material";
+import { PlayArrow, InfoOutlined } from "@mui/icons-material";
 
 export default function Featured({ type }) {
   return (
@@ -42,7 +42,8 @@ export default function Featured({ type }) {
         </span>
         <div className="buttons">
           <button className="playbtn">
-            <PlayArrowOutlined />
+            {/* <PlayArrowOutlined /> */}
+            <PlayArrow />
             <span>Play</span>
           </button>
           <button className="infobtn">
