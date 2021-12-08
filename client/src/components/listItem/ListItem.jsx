@@ -12,11 +12,7 @@ export default function ListItem({ index }) {
   const pieceCover =
     "https://occ-0-1091-1167.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS3om16T6zfR1N1qCSNpHAatBKJuiLulRr7IsbUAWS_IWxkVtdtOlI0QZLmluo1_UWh4P6i_iK4115PC38WCI2fTdwL4aO3D0fE49LMjoSHNPd8C11srecK0BrEp.jpg?r=f9b";
   const trailer =
-    // "https://player.vimeo.com/external/371433836.sd.mp4?s=236da2f3c0fd273d2c6d9a064f3ae35579b2bbdf&profile_id=139&oauth2_token_id=57447761";
-    // "https://www.youtube-nocookie.com/embed/oqxAJKy0ii4";
     "https://player.vimeo.com/video/619166305?h=f793acc01a&color=666666&title=0&byline=0&portrait=0&autoplay=1&mute=1";
-  //   <iframe src="https://player.vimeo.com/video/619166305?h=f793acc01a&color=666666&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-  // <p><a href="https://vimeo.com/619166305">Netflix: Squid Game, Official Trailer</a> from <a href="https://vimeo.com/therefinery">The Refinery Creative</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
   return (
     <div
       className="listItem"
@@ -32,15 +28,19 @@ export default function ListItem({ index }) {
 
       {isHovered && (
         <>
-          {/* <video src={trailer} autoPlay={true} loop /> */}
+          {
+            // CORB issue - can't view through <video/> as video is blocked, works with <iframe/>
+            /* <video src={trailer} autoPlay={true} loop /> */
+          }
           <iframe
+            title="trailer"
             className="video"
             src={trailer}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted;"
             allowfullscreen
             loop
-          ></iframe>
+          />
           <div className="itemInfo">
             <div className="icons">
               <PlayArrow className="icon" />

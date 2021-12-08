@@ -1,4 +1,4 @@
-import { Navbar, Featured, List } from "../components/index";
+import { Navbar, Featured, List } from "../../components/index";
 import "./home.scss";
 
 export default function Home() {
